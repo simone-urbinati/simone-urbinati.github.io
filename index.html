@@ -95,6 +95,47 @@
         </a>
     </header>
 
+
+    <!-- RSVP / Form Section -->
+    <!-- 
+        ISTRUZIONI PER IL GOOGLE FORM:
+        1. Crea un form su Google Forms.
+        2. Vai su Impostazioni -> Risposte -> Spunta "Raccogli indirizzi email" e "Richiedi l'accesso" per assicurarti che la persona faccia il login.
+        3. Aggiungi i campi: Nome, Cognome, Presenza (Sì/No), Numero di persone, Intolleranze/Preferenze alimentari.
+        4. Clicca su "Invia" -> icona "< >" (Incorpora) -> Copia il link "src" e sostituiscilo nell'iframe qui sotto.
+    -->
+    <section id="rsvp" class="py-24 bg-wedding-dark text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="font-serif text-4xl md:text-5xl mb-6 text-wedding-light">Conferma la tua Presenza</h2>
+            <p class="text-gray-300 font-light mb-10">Ti preghiamo di confermare la tua presenza compilando il modulo sottostante entro il 28 Marzo 2026.<br><span class="text-xs italic text-gray-400 mt-2 block">Nota: È richiesto l'accesso con un account Google per compilare il modulo.</span></p>
+            
+            <div class="bg-white p-2 rounded-xl shadow-2xl overflow-hidden relative" style="min-height: 800px;">
+                <!-- Placeholder Form - Sostituire l'attributo 'src' con il proprio link di incorporamento -->
+                <iframe 
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSfDpLnov6nzkoblwIg07-wxPb0EJyardkm96bbWFlgSNT0BXw/viewform?embedded=true" 
+                    width="100%" 
+                    height="800" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0"
+                    class="rounded-lg bg-white"
+                    id="rsvp-iframe">
+                    Caricamento del modulo in corso...
+                </iframe>
+                
+                <!-- Messaggio che appare se l'iframe non carica subito (o come placeholder decorativo) -->
+                <div id="form-overlay" class="absolute inset-0 bg-white flex flex-col items-center justify-center text-wedding-dark z-10 pointer-events-none">
+                    <svg class="animate-spin h-10 w-10 text-wedding-primary mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    <p class="font-serif text-xl">Caricamento modulo RSVP...</p>
+                    <p class="text-sm text-gray-500 mt-4 px-8 text-center">(Se il modulo non appare, ricordati di inserire il link corretto del tuo Google Form nel codice!)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Programma Section -->
     <section id="dettagli" class="py-24 px-4 bg-wedding-light relative">
         <div class="max-w-5xl mx-auto">
@@ -192,45 +233,6 @@
         </div>
     </section>
 
-    <!-- RSVP / Form Section -->
-    <!-- 
-        ISTRUZIONI PER IL GOOGLE FORM:
-        1. Crea un form su Google Forms.
-        2. Vai su Impostazioni -> Risposte -> Spunta "Raccogli indirizzi email" e "Richiedi l'accesso" per assicurarti che la persona faccia il login.
-        3. Aggiungi i campi: Nome, Cognome, Presenza (Sì/No), Numero di persone, Intolleranze/Preferenze alimentari.
-        4. Clicca su "Invia" -> icona "< >" (Incorpora) -> Copia il link "src" e sostituiscilo nell'iframe qui sotto.
-    -->
-    <section id="rsvp" class="py-24 bg-wedding-dark text-white">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="font-serif text-4xl md:text-5xl mb-6 text-wedding-light">Conferma la tua Presenza</h2>
-            <p class="text-gray-300 font-light mb-10">Ti preghiamo di confermare la tua presenza compilando il modulo sottostante entro il 28 Marzo 2026.<br><span class="text-xs italic text-gray-400 mt-2 block">Nota: È richiesto l'accesso con un account Google per compilare il modulo.</span></p>
-            
-            <div class="bg-white p-2 rounded-xl shadow-2xl overflow-hidden relative" style="min-height: 800px;">
-                <!-- Placeholder Form - Sostituire l'attributo 'src' con il proprio link di incorporamento -->
-                <iframe 
-                    src="https://docs.google.com/forms/d/e/1FAIpQLSfDpLnov6nzkoblwIg07-wxPb0EJyardkm96bbWFlgSNT0BXw/viewform?embedded=true" 
-                    width="100%" 
-                    height="800" 
-                    frameborder="0" 
-                    marginheight="0" 
-                    marginwidth="0"
-                    class="rounded-lg bg-white"
-                    id="rsvp-iframe">
-                    Caricamento del modulo in corso...
-                </iframe>
-                
-                <!-- Messaggio che appare se l'iframe non carica subito (o come placeholder decorativo) -->
-                <div id="form-overlay" class="absolute inset-0 bg-white flex flex-col items-center justify-center text-wedding-dark z-10 pointer-events-none">
-                    <svg class="animate-spin h-10 w-10 text-wedding-primary mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                    </svg>
-                    <p class="font-serif text-xl">Caricamento modulo RSVP...</p>
-                    <p class="text-sm text-gray-500 mt-4 px-8 text-center">(Se il modulo non appare, ricordati di inserire il link corretto del tuo Google Form nel codice!)</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="bg-[#1A251A] text-gray-400 py-12 text-center">
