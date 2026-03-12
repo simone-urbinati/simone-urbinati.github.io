@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrimonio di Simone & Romina</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts per un look elegante -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        wedding: {
+                            light: '#F9F8F6',
+                            primary: '#6B8E6B', // Un verde salvia elegante
+                            dark: '#2C3E2C',
+                            text: '#4A4A4A',
+                            gold: '#C5A880'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            /* Immagine di sfondo romantica per la sezione principale */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .section-divider {
+            height: 100px;
+            background-color: theme('colors.wedding.light');
+            clip-path: polygon(0 100%, 100% 0, 100% 100%);
+            margin-top: -99px;
+        }
+    </style>
+</head>
+<body class="font-sans text-wedding-text bg-wedding-light antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm" id="navbar">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <a href="#home" class="font-serif text-2xl md:text-3xl text-wedding-dark font-semibold tracking-wider">S & R</a>
+                <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-medium">
+                    <a href="#dettagli" class="hover:text-wedding-primary transition-colors">Programma</a>
+                    <a href="#location" class="hover:text-wedding-primary transition-colors">Location</a>
+                    <a href="#rsvp" class="hover:text-wedding-primary transition-colors">RSVP</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-wedding-dark focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-2 pt-2 pb-4 space-y-1 text-center text-sm uppercase tracking-widest">
+                <a href="#dettagli" class="block px-3 py-2 text-gray-700 hover:text-wedding-primary">Programma</a>
+                <a href="#location" class="block px-3 py-2 text-gray-700 hover:text-wedding-primary">Location</a>
+                <a href="#rsvp" class="block px-3 py-2 text-gray-700 hover:text-wedding-primary">RSVP</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero-bg h-screen flex flex-col items-center justify-center text-center px-4 relative">
+        <div class="text-white space-y-6 max-w-4xl mx-auto animate-fade-in-up">
+            <p class="text-sm md:text-lg uppercase tracking-[0.3em] font-light">Siamo felici di annunciare il nostro matrimonio</p>
+            <h1 class="font-serif text-7xl md:text-9xl font-medium tracking-wide drop-shadow-lg">Simone & Romina</h1>
+            <div class="flex items-center justify-center space-x-4 mt-8">
+                <div class="h-px w-16 bg-white/70"></div>
+                <p class="text-xl md:text-3xl font-serif italic tracking-wider">28 Maggio 2026</p>
+                <div class="h-px w-16 bg-white/70"></div>
+            </div>
+        </div>
+        <a href="#dettagli" class="absolute bottom-10 text-white animate-bounce">
+            <svg class="w-8 h-8 opacity-70 hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </a>
+    </header>
+
+    <!-- Programma Section -->
+    <section id="dettagli" class="py-24 px-4 bg-wedding-light relative">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-4xl md:text-5xl text-wedding-dark mb-4">Il Programma del Giorno</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto font-light">Non vediamo l'ora di festeggiare questo momento speciale insieme alle persone che amiamo.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 md:gap-24 relative">
+                <!-- Linea verticale decorativa (solo desktop) -->
+                <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-wedding-gold/30 -translate-x-1/2"></div>
+
+                <!-- Cerimonia -->
+                <div class="bg-white p-10 rounded-2xl shadow-sm text-center border border-gray-100 relative z-10 hover:-translate-y-1 transition-transform duration-300">
+                    <div class="w-16 h-16 mx-auto bg-wedding-light rounded-full flex items-center justify-center mb-6 text-wedding-primary">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-3xl text-wedding-dark mb-2">La Cerimonia</h3>
+                    <p class="text-wedding-gold font-medium tracking-widest uppercase mb-6">Ore 10:30</p>
+                    <div class="space-y-2 text-gray-600 font-light">
+                        <p class="font-medium text-gray-800">Chiesa di San Carlo da Sezze</p>
+                        <p>Via di Macchia Saponara, 108</p>
+                        <p>00125 Acilia (RM)</p>
+                    </div>
+                </div>
+
+                <!-- Ricevimento -->
+                <div class="bg-white p-10 rounded-2xl shadow-sm text-center border border-gray-100 relative z-10 hover:-translate-y-1 transition-transform duration-300">
+                    <div class="w-16 h-16 mx-auto bg-wedding-light rounded-full flex items-center justify-center mb-6 text-wedding-primary">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-3xl text-wedding-dark mb-2">Il Ricevimento</h3>
+                    <p class="text-wedding-gold font-medium tracking-widest uppercase mb-6">A seguire</p>
+                    <div class="space-y-2 text-gray-600 font-light">
+                        <p class="font-medium text-gray-800">Casale Malatesta</p>
+                        <p>Via Appia Sud, km 41</p>
+                        <p>00049 Velletri (RM)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location / Mappe Section -->
+    <section id="location" class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-4xl md:text-5xl text-wedding-dark mb-4">Come Raggiungerci</h2>
+                <div class="h-px w-24 bg-wedding-gold mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Mappa Chiesa -->
+                <div class="bg-wedding-light p-4 rounded-xl">
+                    <h4 class="font-serif text-2xl text-center mb-4 text-wedding-dark">San Carlo da Sezze, Acilia</h4>
+                    <div class="w-full h-80 rounded-lg overflow-hidden shadow-inner">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=Chiesa+di+San+Carlo+da+Sezze,+Acilia&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <div class="text-center mt-4">
+                        <a href="https://maps.google.com/?q=Chiesa+di+San+Carlo+da+Sezze,+Acilia" target="_blank" class="inline-block px-6 py-2 border border-wedding-primary text-wedding-primary hover:bg-wedding-primary hover:text-white transition-colors duration-300 rounded-full text-sm uppercase tracking-wider">Apri Navigatore</a>
+                    </div>
+                </div>
+
+                <!-- Mappa Ricevimento -->
+                <div class="bg-wedding-light p-4 rounded-xl">
+                    <h4 class="font-serif text-2xl text-center mb-4 text-wedding-dark">Casale Malatesta, Velletri</h4>
+                    <div class="w-full h-80 rounded-lg overflow-hidden shadow-inner">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=Casale+Malatesta,+Velletri&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <div class="text-center mt-4">
+                        <a href="https://maps.google.com/?q=Casale+Malatesta,+Velletri" target="_blank" class="inline-block px-6 py-2 border border-wedding-primary text-wedding-primary hover:bg-wedding-primary hover:text-white transition-colors duration-300 rounded-full text-sm uppercase tracking-wider">Apri Navigatore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP / Form Section -->
+    <!-- 
+        ISTRUZIONI PER IL GOOGLE FORM:
+        1. Crea un form su Google Forms.
+        2. Vai su Impostazioni -> Risposte -> Spunta "Raccogli indirizzi email" e "Richiedi l'accesso" per assicurarti che la persona faccia il login.
+        3. Aggiungi i campi: Nome, Cognome, Presenza (Sì/No), Numero di persone, Intolleranze/Preferenze alimentari.
+        4. Clicca su "Invia" -> icona "< >" (Incorpora) -> Copia il link "src" e sostituiscilo nell'iframe qui sotto.
+    -->
+    <section id="rsvp" class="py-24 bg-wedding-dark text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="font-serif text-4xl md:text-5xl mb-6 text-wedding-light">Conferma la tua Presenza</h2>
+            <p class="text-gray-300 font-light mb-10">Ti preghiamo di confermare la tua presenza compilando il modulo sottostante entro il 28 Marzo 2026.<br><span class="text-xs italic text-gray-400 mt-2 block">Nota: È richiesto l'accesso con un account Google per compilare il modulo.</span></p>
+            
+            <div class="bg-white p-2 rounded-xl shadow-2xl overflow-hidden relative" style="min-height: 800px;">
+                <!-- Placeholder Form - Sostituire l'attributo 'src' con il proprio link di incorporamento -->
+                <iframe 
+                    src="https://docs.google.com/forms/d/e/1FAIpQLScd_PLACEHOLDER_URL/viewform?embedded=true" 
+                    width="100%" 
+                    height="800" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0"
+                    class="rounded-lg bg-white"
+                    id="rsvp-iframe">
+                    Caricamento del modulo in corso...
+                </iframe>
+                
+                <!-- Messaggio che appare se l'iframe non carica subito (o come placeholder decorativo) -->
+                <div id="form-overlay" class="absolute inset-0 bg-white flex flex-col items-center justify-center text-wedding-dark z-10 pointer-events-none">
+                    <svg class="animate-spin h-10 w-10 text-wedding-primary mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    <p class="font-serif text-xl">Caricamento modulo RSVP...</p>
+                    <p class="text-sm text-gray-500 mt-4 px-8 text-center">(Se il modulo non appare, ricordati di inserire il link corretto del tuo Google Form nel codice!)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#1A251A] text-gray-400 py-12 text-center">
+        <div class="font-serif text-3xl text-wedding-light mb-4">Simone & Romina</div>
+        <p class="tracking-widest uppercase text-xs mb-8">28 Maggio 2026</p>
+        <p class="text-sm opacity-60">&copy; 2026 Simone & Romina. Tutti i diritti riservati.</p>
+    </footer>
+
+    <script>
+        // Gestione del menu mobile
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Nascondi menu mobile al click su un link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Gestione caricamento iframe Google Form
+        const iframe = document.getElementById('rsvp-iframe');
+        const overlay = document.getElementById('form-overlay');
+        
+        iframe.onload = function() {
+            // Rimuovi l'overlay di caricamento una volta che l'iframe è caricato
+            setTimeout(() => {
+                overlay.style.opacity = '0';
+                overlay.style.transition = 'opacity 0.5s ease';
+                setTimeout(() => overlay.remove(), 500);
+            }, 1000); // Piccolo ritardo per assicurare il rendering visivo
+        };
+    </script>
+</body>
+</html>
